@@ -19,3 +19,20 @@ max_hr = st.slider("Maximum Heart Rate", 60, 220, 150)
 exercise_angina = st.selectbox("Exercise Induced Angina", ['Yes','No'])
 oldpeak = st.slider("OldPeak (ST Depression)", 0.0, 6.0, 1.0)
 st_slope = st.selectbox("ST SLope",['UP','Flat','Down'])
+
+
+if st.button("Predict"):
+    raw_input = {
+        "Age" : age,
+        "RestingBP" : resting_bp,  
+        "Cholesterol" : cholesterol,
+        "FastingBS" : fasting_bs,
+         "MaxHR" : max_hr,
+        "Oldpeak" : oldpeak,
+        "Sex" + sex : 1,
+        "ChestPainType" + chest_pain : 1,
+        "RestingECG" + resting_ecg : 1,
+        "ExerciseAngina" + exercise_angina : 1,
+        "ST_Slope" + st_slope : 1
+     }
+    
