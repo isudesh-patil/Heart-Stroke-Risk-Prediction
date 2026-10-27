@@ -6,3 +6,4 @@ model = joblib.load("KNN_heart_stoke_prediction.pkl")
 scaler = joblib.load("scaler.pkl")
 columns = joblib.load("columns.pkl")
 
+st.title("Heart Stroke Prediction❤️")
