@@ -40,3 +40,9 @@ if st.button("Predict"):
         if col not in input_df.columns:
             input_df[col] = 0
     input_df = input_df[columns]
+    scaled_input = scaler.transform(input_df)
+    prediction = model.predict(scaled_input)[0]
+    if prediction == 1:
+        st.error(" High risk of Heart Stroke")
+    else:
+        st.success("Low rirsk of Heart Stroke")
