@@ -35,4 +35,8 @@ if st.button("Predict"):
         "ExerciseAngina" + exercise_angina : 1,
         "ST_Slope" + st_slope : 1
      }
-    
+    input_df = pd.DataFrame([raw_input])
+    for col in columns :
+        if col not in input_df.columns:
+            input_df[col] = 0
+    input_df = input_df[columns]
